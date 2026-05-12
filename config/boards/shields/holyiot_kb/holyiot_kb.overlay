@@ -1,4 +1,6 @@
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <dt-bindings/input/input-event-codes.h>
+#include <dt-bindings/zmk/pointing.h>
 
 /* Configure I2C pins for the trackpad */
 &pinctrl {
@@ -44,10 +46,20 @@
         zmk,matrix_transform = &default_transform;
     };
 
+    /* Map Zephyr input events to ZMK behaviors */
+    zip_button_behaviors: zip-button-behaviors {
+        compatible = "zmk,input-processor-behaviors";
+        #input-processor-cells = <0>;
+        /* Map Zephyr INPUT_BTN_LEFT to ZMK Left Click */
+        codes = <INPUT_BTN_LEFT>;
+        bindings = <&mkp MB1>;
+    };
+
     /* Connect trackpad to ZMK's pointing system */
     trackpad_listener {
         compatible = "zmk,input-listener";
         device = <&trackpad>;
+        input-processors = <&zip_button_behaviors>;
     };
 
     kscan0: kscan {
