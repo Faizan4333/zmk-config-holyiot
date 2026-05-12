@@ -1,0 +1,6 @@
+if SHIELD_HOLYIOT_KB
+
+config ZMK_KEYBOARD_NAME
+    default "HolyIoT KB"
+
+endif

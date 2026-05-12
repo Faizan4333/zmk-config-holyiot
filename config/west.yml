@@ -1,0 +1,16 @@
+manifest:
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: faiza
+      url-base: https://github.com/Faizan4333
+  projects:
+    - name: zmk
+      remote: zmkfirmware
+      revision: main
+      import: app/west.yml
+    - name: zmk-adbs-a320-module
+      remote: faiza
+      revision: main
+  self:
+    path: config

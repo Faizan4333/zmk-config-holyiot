@@ -1,0 +1,2 @@
+config SHIELD_HOLYIOT_KB
+    def_bool $(shields_list_contains,holyiot_kb)
