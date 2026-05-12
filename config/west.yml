@@ -12,5 +12,8 @@ manifest:
     - name: zmk-adbs-a320-module
       remote: faiza
       revision: main
+    - name: zmk-holyiot-system-module
+      remote: faiza
+      revision: main
   self:
     path: config
