@@ -17,5 +17,29 @@
                 &kp N5 &kp N6 &kp N7 &kp N8 &bt BT_CLR
             >;
         };
+
+        fn_layer_1 {
+            bindings = <
+                &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans
+            >;
+        };
+
+        fn_layer_2 {
+            bindings = <
+                &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans
+            >;
+        };
     };
 };
